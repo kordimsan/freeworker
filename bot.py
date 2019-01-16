@@ -1075,8 +1075,8 @@ def settings(bot,update):
     bot.send_message(update.message.chat.id,update.message.text,reply_markup=reply_markup)
 
 def dbcon(sql,data):
-    db = pymysql.connect(host="localhost",user="root",passwd="123",db="fwbot",charset='utf8')
-    #db = mysql.connector.connect(host="localhost", user="root", password="123", database="fwbot", charset='utf8')
+    #db = pymysql.connect(host="localhost",user="root",passwd="123",db="fwbot",charset='utf8')
+    db = mysql.connector.connect(host="localhost", user="root", password="123", database="fwbot", charset='utf8')
     #db = SQLighter.connect(database_name)
     with db:
         cur=db.cursor()
