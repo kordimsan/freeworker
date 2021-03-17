@@ -1126,7 +1126,7 @@ def watermark_with_transparency(input_image_path,output_image_path):
 def error(bot, update, error): logger.warn('Update "%s" caused error "%s"' % (update, error))
 
 def main():
-    updater = Updater(config.token)
+    updater = Updater(os.getenv('TOKEN'))
     dp = updater.dispatcher
     dp.add_handler(CommandHandler("start"           ,start))
     dp.add_handler(CommandHandler("settings"        ,settings))
